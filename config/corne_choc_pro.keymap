@@ -23,33 +23,16 @@
             display-name = "QWERTZ";
 
             // --------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |  MUTE |  PP   |  Z  |  U   |  I  |  O  |  P  | BSPC |
-            // | CTRL |  A  |  S  |  D  |  F  |  G  |  LALT |  RALT |  H  |  J   |  K  |  L  |  Ö  |  Ä   |
-            // | SHFT |  Y  |  X  |  C  |  V  |  B  |               |  N  |  M   | , ; | . : | - _ | ESC  |
+            // |  TAB |  Q  |  W  |  E  |  R  |  T  |  MUTE |  PP   |  Z  | U/Ü  |  I  | O/Ö |  P  | BSPC |
+            // | CTRL | A/Ä |  S  |  D  |  F  |  G  |  LALT |  RALT |  H  |  J   |  K  |  L  |  ;  |  '   |
+            // | SHFT |  Y  |  X  |  C  |  V  |  B  |               |  N  |  M   | , ; | . : |  /  | ESC  |
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T      &none  &none  &kp Y    &kp U  &kp I      &kp O    &kp P      &kp BSPC
-&kp LCTRL  &kp A  &kp S  &kp D     &kp F  &kp G      &none  &none  &kp H    &kp J  &kp K      &kp L    &kp MINUS  &kp PLUS
-&kp LSHFT  &kp Z  &kp X  &kp C     &kp V  &kp B                    &kp N    &kp M  &kp COMMA  &kp DOT  &kp SLASH  &kp ESC
+&kp TAB    &DE_Q                &DE_W  &DE_E     &DE_R  &DE_T      &none  &none  &DE_Z    &lt DE_U_UMLAUT DE_U  &DE_I      &lt DE_O_UMLAUT DE_O    &DE_P      &kp BSPC
+&kp LCTRL  &lt DE_A_UMLAUT DE_A  &DE_S  &DE_D     &DE_F  &DE_G      &none  &none  &DE_H    &DE_J  &DE_K      &DE_L    &kp SEMI   &kp SQT
+&kp LSHFT  &DE_Y  &DE_X  &DE_C     &DE_V  &DE_B                    &DE_N    &DE_M  &kp COMMA  &kp DOT  &kp SLASH  &kp ESC
                          &kp LGUI  &mo 1  &kp SPACE                &kp RET  &mo 2  &kp LALT
-            >;
-        };
-
-        lower_layer {
-            display-name = "NUMBER";
-
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5    |  LCTRL | RCTRL |  6  |  7  |  8  |  9  |  0  | BSPC |
-            // | CTRL | BT1 | BT2 | BT3 | BT4 | BT5   |  LALT  | RALT  | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT | BTCR| RGB | RST | BOOT| Unlock|        |       |     |     |     |     |     |      |
-            //                    | GUI |     | SPC   |        | ENT   |     | ALT |
-
-            bindings = <
-&kp TAB    &kp N1        &kp N2           &kp N3        &kp N4        &kp N5          &none  &none  &kp N6    &kp N7    &kp N8    &kp N9     &kp N0  &kp BSPC
-&kp LCTRL  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &none  &none  &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &none   &none
-&kp LSHFT  &bt BT_CLR    &rgb_ug RGB_TOG  &sys_reset    &bootloader   &studio_unlock                &none     &none     &none     &none      &none   &none
-                                          &kp LGUI      &none         &kp SPACE                     &kp RET   &none     &kp LALT
             >;
         };
 
@@ -57,16 +40,33 @@
             display-name = "SYMBOL";
 
             // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  | LCTRL | RCTRL |  ^  |  &  |  *  |  (  |  )  | BSPC |
-            // | CTRL |     |     |     |     |     |  LALT | RALT  |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |               |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |               | ENT |     | ALT |
+            // |      |      |  `  |  ^  |  $  |  ?  |      |       |  '  |  [  |  ]  |  +  |  *  |      |
+            // |      |      |  |  |  @  |  #  |  &  |      |       |  "  |  (  |  )  |  -  |  \  |      |
+            // |      |      |  ~  |  <  |  >  |  !  |              |  _  |  {  |  }  |  %  |  =  |      |
+            //                     |     |     |     |              |     |     |     |
 
             bindings = <
-&kp TAB    &kp EXCL  &kp QUESTION  &kp HASH  &kp DLLR  &kp PRCNT  &none  &none  &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AMPERSAND  &kp BSPC
-&kp LCTRL  &kp AT    &none         &none     &none     &none      &none  &none  &kp SLASH          &kp EQUAL         &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BSLH       &none
-&kp LSHFT  &none     &none         &none     &none     &none                    &kp MINUS          &kp PLUS          &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE       &kp TILDE
-                                   &kp LGUI  &none     &kp SPACE                &kp RET            &none             &kp LALT
+&none  &none  &kp DE_GRAVE  &kp DE_CARET      &kp DE_DLLR          &kp DE_QUESTION     &none  &none  &kp DE_SINGLE_QUOTE   &kp DE_LEFT_BRACKET      &kp DE_RIGHT_BRACKET      &kp DE_PLUS     &kp DE_ASTERISK         &none
+&none  &none  &kp DE_PIPE   &kp DE_AT_SIGN    &kp DE_HASH          &kp DE_AMPS         &none  &none  &kp DE_DOUBLE_QUOTES  &kp DE_LEFT_PARENTHESIS  &kp DE_RIGHT_PARENTHESIS  &kp DE_MINUS    &mt DE_BACKSLASH DE_SLASH  &none
+&none  &none  &kp DE_TILDE  &kp DE_LESS_THAN  &kp DE_GREATER_THAN  &kp DE_EXCLAMATION                &kp DE_UNDER          &kp DE_LEFT_BRACE        &kp DE_RIGHT_BRACE        &kp DE_PERCENT  &kp DE_EQUAL            &none
+                         &trans         &trans            &trans                         &trans             &trans                &trans
+            >;
+        };
+
+        lower_layer {
+            display-name = "NUMBER";
+
+            // -----------------------------------------------------------------------------------------
+            // |  +   |  -   |  *   |  /   | RGB  | RST  |      |      |  7   |  8   |  9   |      |      | BSPC |
+            // |  =   |  %   |  ^   |  !   |      |      |      |      |  4   |  5   |  6   |      |      |      |
+            // |      |      |      |      |      |      |             |  1   |  2   |  3   |  0   |      |      |
+            //                      |      |      |      |             |      |      |      |
+
+            bindings = <
+&kp DE_PLUS      &kp DE_MINUS      &kp DE_ASTERISK  &kp DE_SLASH     &rgb_ug RGB_TOG  &sys_reset    &none  &none  &kp DE_N7    &kp DE_N8    &kp DE_N9    &none     &none  &kp BSPC
+&kp DE_EQUAL     &kp DE_PERCENT    &kp DE_CARET     &kp DE_EXCLAMATION &none         &none         &none  &none  &kp DE_N4    &kp DE_N5    &kp DE_N6    &none     &none  &none
+&none            &none             &none            &none            &none          &none                    &kp DE_N1    &kp DE_N2    &kp DE_N3    &kp DE_N0    &none  &none
+                                          &trans        &trans         &trans                     &trans    &trans    &trans
             >;
         };
     };
