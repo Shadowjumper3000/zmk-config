@@ -23,8 +23,8 @@
             display-name = "QWERTZ";
 
             // --------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |  MUTE |  PP   |  Z  | U/Ü  |  I  | O/Ö |  P  | BSPC |
-            // | CTRL | A/Ä |  S  |  D  |  F  |  G  |  LALT |  RALT |  H  |  J   |  K  |  L  |  ;  |  '   |
+            // |  TAB |  Q  |  W  |  E  |  R  |  T  |  MUTE |  PP   |  Z  |  U   |  I  |  O  |  P  | BSPC |
+            // | CTRL |  A  |  S  |  D  |  F  |  G  |  LALT |  RALT |  H  |  J   |  K  |  L  |  ;  |  '   |
             // | SHFT |  Y  |  X  |  C  |  V  |  B  |               |  N  |  M   | , ; | . : |  /  | ESC  |
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
