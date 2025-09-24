@@ -28,9 +28,26 @@
 
             bindings = <
 &kp TAB    &kp DE_Q  &kp DE_W  &kp DE_E  &kp DE_R  &kp DE_T   &none  &none  &kp DE_Z  &kp DE_U  &kp DE_I      &kp DE_O    &kp DE_P        &kp BSPC
-&kp LCTRL  &kp DE_A  &kp DE_S  &kp DE_D  &kp DE_F  &kp DE_G   &none  &none  &kp DE_H  &kp DE_J  &kp DE_K      &kp DE_L    &kp DE_SHARP_S  &kp SQT
+&kp LCTRL  &kp DE_A  &kp DE_S  &kp DE_D  &kp DE_F  &kp DE_G   &none  &none  &kp DE_H  &kp DE_J  &kp DE_K      &kp DE_L    &kp DE_SHARP_S  &kp DE_SQT
 &kp LSHFT  &kp DE_Y  &kp DE_X  &kp DE_C  &kp DE_V  &kp DE_B                 &kp DE_N  &kp DE_M  &kp DE_COMMA  &kp DE_DOT  &kp DE_SLASH    &kp ESC
                                &kp LGUI  &mo 1     &kp SPACE                &kp RET   &mo 2     &kp LALT
+            >;
+        };
+
+        lower_layer {
+            display-name = "NUMBER";
+
+            // -----------------------------------------------------------------------------------------
+            // |     |     |     |     | RGB  | RST  |      |      |  7   |  8   |  9   |  =   |      | BSPC |
+            // |     | LEFT| DOWN|  UP | RIGHT|      |      |      |  4   |  5   |  6   |  /   |  *   |      |
+            // |     |     |     |     |      |      |             |  1   |  2   |  3   |  +   |  -   |      |
+            //                   |     |      |      |             |  0   |      |      |
+
+            bindings = <
+&trans  &none     &studio_unlock  &bootloader  &rgb_ug RGB_TOG  &sys_reset  &none  &none  &kp DE_N7  &kp DE_N8  &kp DE_N9  &kp DE_EQUAL  &none            &trans
+&trans  &kp LEFT  &kp DOWN        &kp UP       &kp RIGHT        &none       &none  &none  &kp DE_N4  &kp DE_N5  &kp DE_N6  &kp DE_SLASH  &kp DE_ASTERISK  &trans
+&trans  &none     &none           &none        &none            &none                     &kp DE_N1  &kp DE_N2  &kp DE_N3  &kp DE_PLUS   &kp DE_MINUS     &trans
+                                  &trans       &trans           &trans                    &kp DE_N0  &trans     &trans
             >;
         };
 
@@ -48,23 +65,6 @@
 &kp DE_U_UMLAUT  &none  &kp DE_PIPE   &kp DE_AT_SIGN    &kp DE_HASH          &kp DE_AMPS         &none  &none  &kp DE_DOUBLE_QUOTES  &kp DE_LEFT_PARENTHESIS  &kp DE_RIGHT_PARENTHESIS  &kp DE_MINUS    &mt DE_BACKSLASH DE_SLASH  &kp PAGE_UP
 &kp DE_O_UMLAUT  &none  &kp DE_TILDE  &kp DE_LESS_THAN  &kp DE_GREATER_THAN  &kp DE_EXCLAMATION                &kp DE_UNDER          &kp DE_LEFT_BRACE        &kp DE_RIGHT_BRACE        &kp DE_PERCENT  &kp DE_EQUAL               &kp PAGE_DOWN
                                       &trans            &trans               &trans                            &trans                &trans                   &trans
-            >;
-        };
-
-        lower_layer {
-            display-name = "NUMBER";
-
-            // -----------------------------------------------------------------------------------------
-            // |     |     |     |     | RGB  | RST  |      |      |  7   |  8   |  9   |  =   |      | BSPC |
-            // |     | LEFT| DOWN|  UP | RIGHT|      |      |      |  4   |  5   |  6   |  /   |  *   |      |
-            // |     |     |     |     |      |      |             |  1   |  2   |  3   |  +   |  -   |      |
-            //                   |     |      |      |             |  0   |      |      |
-
-            bindings = <
-&none  &none     &studio_unlock  &bootloader  &rgb_ug RGB_TOG  &sys_reset  &none  &none  &kp DE_N7  &kp DE_N8  &kp DE_N9  &kp DE_EQUAL  &none            &kp BSPC
-&none  &kp LEFT  &kp DOWN        &kp UP       &kp RIGHT        &none       &none  &none  &kp DE_N4  &kp DE_N5  &kp DE_N6  &kp DE_SLASH  &kp DE_ASTERISK  &none
-&none  &none     &none           &none        &none            &none                     &kp DE_N1  &kp DE_N2  &kp DE_N3  &kp DE_PLUS   &kp DE_MINUS     &none
-                                 &trans       &trans           &trans                    &kp DE_N0  &trans     &trans
             >;
         };
     };
