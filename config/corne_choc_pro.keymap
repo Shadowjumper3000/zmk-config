@@ -44,8 +44,8 @@
             //                   |     |      |      |             |  0   |      |      |
 
             bindings = <
-&trans  &none     &studio_unlock  &bootloader  &rgb_ug RGB_TOG  &sys_reset  &none  &none  &kp DE_N7  &kp DE_N8  &kp DE_N9  &kp DE_EQUAL  &none            &trans
-&trans  &kp LEFT  &kp DOWN        &kp UP       &kp RIGHT        &none       &none  &none  &kp DE_N4  &kp DE_N5  &kp DE_N6  &kp DE_SLASH  &kp DE_ASTERISK  &trans
+&trans  &none     &studio_unlock  &bootloader  &rgb_ug RGB_TOG  &sys_reset  &none  &none  &kp DE_N7  &kp DE_N8  &kp DE_N9  &kp DE_EQUAL  &kp DE_PRCNT     &trans
+&trans  &kp LEFT  &kp DOWN        &kp UP       &kp RIGHT        &none       &none  &none  &kp DE_N4  &kp DE_N5  &kp DE_N6  &kp DE_BSLH   &kp DE_ASTERISK  &trans
 &trans  &kp F1    &kp F2          &none        &none            &kp F5                    &kp DE_N1  &kp DE_N2  &kp DE_N3  &kp DE_PLUS   &kp DE_MINUS     &trans
                                   &trans       &trans           &trans                    &kp DE_N0  &trans     &trans
             >;
@@ -61,9 +61,9 @@
             //                       |     |     |     |              |     |     |     |
 
             bindings = <
-&trans  &kp DE_A_UMLAUT  &kp DE_SZ     &kp DE_CARET      &kp DE_DLLR          &kp DE_QUESTION     &none  &none  &kp DE_GRAVE          &kp DE_LEFT_BRACKET      &kp DE_RIGHT_BRACKET      &kp DE_PLUS     &kp DE_ASTERISK            &kp DELETE
-&trans  &kp DE_O_UMLAUT  &kp DE_PIPE   &kp DE_AT_SIGN    &kp DE_HASH          &kp DE_AMPS         &none  &none  &kp DE_DOUBLE_QUOTES  &kp DE_LEFT_PARENTHESIS  &kp DE_RIGHT_PARENTHESIS  &kp DE_MINUS    &mt DE_BACKSLASH DE_SLASH  &kp PAGE_UP
-&trans  &kp DE_U_UMLAUT  &kp DE_TILDE  &kp DE_LESS_THAN  &kp DE_GREATER_THAN  &kp DE_EXCLAMATION                &kp DE_UNDER          &kp DE_LEFT_BRACE        &kp DE_RIGHT_BRACE        &kp DE_PERCENT  &kp DE_EQUAL               &kp PAGE_DOWN
+&trans  &kp DE_A_UMLAUT  &kp DE_SZ     &kp DE_CARET      &kp DE_DLLR          &kp DE_QUESTION     &none  &none  &kp DE_GRAVE          &kp DE_LEFT_BRACKET      &kp DE_RIGHT_BRACKET      &none  &none  &kp DELETE
+&trans  &kp DE_O_UMLAUT  &kp DE_PIPE   &kp DE_AT_SIGN    &kp DE_HASH          &kp DE_AMPS         &none  &none  &kp DE_DOUBLE_QUOTES  &kp DE_LEFT_PARENTHESIS  &kp DE_RIGHT_PARENTHESIS  &none  &none  &kp PAGE_UP
+&trans  &kp DE_U_UMLAUT  &kp DE_TILDE  &kp DE_LESS_THAN  &kp DE_GREATER_THAN  &kp DE_EXCLAMATION                &kp DE_UNDER          &kp DE_LEFT_BRACE        &kp DE_RIGHT_BRACE        &none  &none  &kp PAGE_DOWN
                                        &trans            &trans               &trans                            &trans                &trans                   &trans
             >;
         };
