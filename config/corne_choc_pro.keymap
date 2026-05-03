@@ -44,10 +44,10 @@
             //                   |     |      |      |             |  0   |      |      |
 
             bindings = <
-&trans  &trans    &trans    &trans  &trans     &bt BT_NXT  &none  &none  &kp DE_N7  &kp DE_N8  &kp DE_N9  &kp DE_EQUAL  &kp DE_PRCNT     &trans
-&trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &bt BT_CLR  &none  &none  &kp DE_N4  &kp DE_N5  &kp DE_N6  &kp DE_BSLH   &kp DE_ASTERISK  &bootloader
-&trans  &kp F1    &kp F2    &kp F3  &kp F4     &kp F5                    &kp DE_N1  &kp DE_N2  &kp DE_N3  &kp DE_PLUS   &kp DE_MINUS     &sys_reset
-                            &trans  &trans     &trans                    &kp DE_N0  &trans     &trans
+&sys_reset  &trans    &trans    &trans  &trans     &bt BT_NXT  &none  &none  &kp DE_N7  &kp DE_N8  &kp DE_N9  &kp DE_EQUAL  &kp DE_PRCNT     &trans
+&trans      &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &bt BT_CLR  &none  &none  &kp DE_N4  &kp DE_N5  &kp DE_N6  &kp DE_BSLH   &kp DE_ASTERISK  &bootloader
+&trans      &kp F1    &kp F2    &kp F3  &kp F4     &kp F5                    &kp DE_N1  &kp DE_N2  &kp DE_N3  &kp DE_PLUS   &kp DE_MINUS     &sys_reset
+                                &trans  &trans     &trans                    &kp DE_N0  &trans     &trans
             >;
         };
 
