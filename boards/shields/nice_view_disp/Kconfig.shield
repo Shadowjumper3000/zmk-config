@@ -3,3 +3,21 @@
 
 config SHIELD_NICE_VIEW_DISP
     def_bool $(shields_list_contains,nice_view_disp)
+
+config NICE_VIEW_DISP_CUSTOM_ART
+    bool "Enable custom art header"
+    def_bool $(shields_list_contains,nice_view_disp)
+    help
+      If enabled, the build will include a header file named
+      nice_view_custom_art.h (which must define an LVGL image descriptor
+      named `nice_view_custom_art`) and use it on the status widget.
+
+config NICE_VIEW_DISP_CUSTOM_ART_PATH
+    string "Custom art header path"
+    default "nice_view_custom_art.h"
+    depends on NICE_VIEW_DISP_CUSTOM_ART
+    help
+      If set, this string will be used as the path to the custom
+      art header instead of the default name. This allows placing the
+      header in a different directory. The header must expose an
+      LVGL image descriptor named `nice_view_custom_art`.

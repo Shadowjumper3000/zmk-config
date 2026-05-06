@@ -26,6 +26,13 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 LV_IMG_DECLARE(balloon);
 LV_IMG_DECLARE(mountain);
 
+#if IS_ENABLED(CONFIG_NICE_VIEW_DISP_CUSTOM_ART)
+/* CONFIG_NICE_VIEW_DISP_CUSTOM_ART_PATH is expected to be a quoted header path
+ * (e.g. "nice_view_custom_art.h"). We can include it directly. */
+#include CONFIG_NICE_VIEW_DISP_CUSTOM_ART_PATH
+LV_IMG_DECLARE(nice_view_custom_art);
+#endif
+
 static sys_slist_t widgets = SYS_SLIST_STATIC_INIT(&widgets);
 
 struct peripheral_status_state {
@@ -124,7 +131,13 @@ int zmk_widget_status_init(struct zmk_widget_status *widget, lv_obj_t *parent) {
 
     lv_obj_t *art = lv_img_create(widget->obj);
     bool random = sys_rand32_get() & 1;
+
+#if IS_ENABLED(CONFIG_NICE_VIEW_DISP_CUSTOM_ART)
+    /* Prefer custom art if configured; fall back to existing behavior */
+    lv_img_set_src(art, &nice_view_custom_art);
+#else
     lv_img_set_src(art, random ? &balloon : &mountain);
+#endif
     lv_obj_align(art, LV_ALIGN_TOP_LEFT, art_pos, 0);
 
     sys_slist_append(&widgets, &widget->node);

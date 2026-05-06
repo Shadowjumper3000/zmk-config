@@ -20,4 +20,23 @@ You can rotate the custom widget by 180 degrees. To do so, add the following ite
 
 ```
 CONFIG_NICE_VIEW_DISP_ROTATE_180=y
+
+## Custom art
+
+You can provide a custom image for the widget by adding a C header that defines an LVGL image descriptor named `nice_view_custom_art`.
+
+1. Create a header (example: `nice_view_custom_art.h`) that contains an `lv_img_dsc_t` named `nice_view_custom_art` (many image-to-C tools can generate this for you).
+2. Enable the custom art in your .conf:
+
+```text
+CONFIG_NICE_VIEW_DISP_CUSTOM_ART=y
+```
+
+3. If your header isn't in the include path or has a different name, set the path:
+
+```text
+CONFIG_NICE_VIEW_DISP_CUSTOM_ART_PATH="path/to/nice_view_custom_art.h"
+```
+
+When enabled, the widget will use `nice_view_custom_art` instead of the built-in balloon/mountain images.
 ```
