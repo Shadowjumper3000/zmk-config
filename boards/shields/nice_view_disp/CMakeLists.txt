@@ -1,4 +1,7 @@
 if(CONFIG_ZMK_DISPLAY AND CONFIG_NICE_VIEW_DISP_WIDGET_STATUS)
+  # Add shield include directory so generated headers like nice_view_custom_art.h
+  # are available in the compiler include path for both left/right builds.
+  zephyr_library_include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
   zephyr_library_include_directories(${CMAKE_SOURCE_DIR}/include)
   zephyr_library_sources(custom_status_screen.c)
   zephyr_library_sources(widgets/bolt.c)
