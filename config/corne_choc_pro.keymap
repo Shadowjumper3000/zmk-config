@@ -40,8 +40,10 @@
 &trans  &kp F1       &kp F2       &kp F3            &kp F4        &kp F5              &trans  &trans  &kp DE_AMPERSAND  &kp N7  &kp N8  &kp N9  &none  &trans
 &trans  &kp DOLLAR   &kp DE_EURO  &kp AT            &kp DE_HASH   &kp DE_QUESTION     &trans  &trans  &kp EQUAL         &kp N4  &kp N5  &kp N6  &none  &trans
 &trans  &kp DE_PIPE  &kp LT       &kp GREATER_THAN  &kp DE_TILDE  &kp DE_EXCLAMATION                  &kp N0            &kp N1  &kp N2  &kp N3  &none  &trans
-                                  &trans            &trans        &trans                              &trans            &tog 3  &trans
+                                  &trans            &trans        &trans                              &trans            &to 3   &trans
             >;
+
+            label = "NUMBER";
         };
 
         SYMBOL {
@@ -49,16 +51,18 @@
 &trans  &bootloader      &bt BT_PRV  &kp DE_LEFT_BRACE        &kp DE_RIGHT_BRACE        &kp CARET         &trans  &trans  &none             &kp PLUS         &kp DOUBLE_QUOTES  &kp DE_ASTERISK  &kp PRCNT  &trans
 &trans  &sys_reset       &bt BT_CLR  &kp DE_LEFT_PARENTHESIS  &kp DE_RIGHT_PARENTHESIS  &kp DE_BACKSLASH  &trans  &trans  &none             &kp LEFT         &kp DOWN           &kp UP           &kp RIGHT  &trans
 &trans  &rgb_ug RGB_TOG  &bt BT_NXT  &kp DE_LEFT_BRACKET      &kp DE_RIGHT_BRACKET      &none                             &kp C_PLAY_PAUSE  &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &kp C_NEXT       &none      &trans
-                                     &trans                   &tog 0                    &trans                            &trans            &trans           &trans
+                                     &trans                   &to 0                     &trans                            &trans            &trans           &trans
             >;
+
+            label = "SYMBOL";
         };
 
         QWERTY {
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T      &trans  &trans  &kp Z    &kp U  &kp I      &kp O    &kp P      &kp BSPC
-&kp LCTRL  &kp A  &kp S  &kp D     &kp F  &kp G      &trans  &trans  &kp H    &kp J  &kp K      &kp L    &kp MINUS  &kp APOS
-&kp LSHFT  &kp Y  &kp X  &kp C     &kp V  &kp B                      &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH   &kp ESC
-                         &kp LGUI  &mo 1  &kp SPACE                  &kp RET  &mo 2  &kp LALT
+&kp TAB    &kp Q     &kp W  &kp E     &kp R  &kp T      &trans  &trans  &kp DE_Z  &kp U  &kp I      &kp O    &kp P      &kp BSPC
+&kp LCTRL  &kp A     &kp S  &kp D     &kp F  &kp G      &trans  &trans  &kp H     &kp J  &kp K      &kp L    &kp MINUS  &kp APOS
+&kp LSHFT  &kp DE_Y  &kp X  &kp C     &kp V  &kp B                      &kp N     &kp M  &kp COMMA  &kp DOT  &kp FSLH   &kp ESC
+                            &kp LGUI  &mo 1  &kp SPACE                  &kp RET   &mo 2  &kp LALT
             >;
         };
     };
