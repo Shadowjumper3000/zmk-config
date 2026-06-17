@@ -31,10 +31,10 @@
 
         NUMBER {
             bindings = <
-&trans  &kp F1       &kp F2       &kp F3            &kp F4        &kp F5              &trans  &trans  &kp DE_AMPERSAND  &kp N7  &kp N8  &kp N9  &none  &trans
-&trans  &kp DOLLAR   &kp DE_EURO  &kp AT            &kp DE_HASH   &kp DE_QUESTION     &trans  &trans  &kp EQUAL         &kp N4  &kp N5  &kp N6  &none  &trans
-&trans  &kp DE_PIPE  &kp LT       &kp GREATER_THAN  &kp DE_TILDE  &kp DE_EXCLAMATION                  &kp N0            &kp N1  &kp N2  &kp N3  &none  &trans
-                                  &trans            &trans        &trans                              &trans            &tog 3  &trans
+&trans  &kp F1       &kp F2       &kp F3     &kp F4        &kp F5              &trans  &trans  &kp DE_AMPERSAND  &kp N7  &kp N8  &kp N9  &none  &trans
+&trans  &kp DOLLAR   &kp DE_EURO  &kp DE_AT  &kp DE_HASH   &kp DE_QUESTION     &trans  &trans  &kp DE_EQUAL      &kp N4  &kp N5  &kp N6  &none  &trans
+&trans  &kp DE_PIPE  &kp DE_LT    &kp DE_GT  &kp DE_TILDE  &kp DE_EXCLAMATION                  &kp N0            &kp N1  &kp N2  &kp N3  &none  &trans
+                                  &trans     &trans        &trans                              &trans            &tog 3  &trans
             >;
 
             label = "NUMBER";
@@ -42,9 +42,9 @@
 
         SYMBOL {
             bindings = <
-&trans  &rgb_ug RGB_TOG  &bt BT_PRV  &kp DE_LEFT_BRACE        &kp DE_RIGHT_BRACE        &kp CARET         &trans  &trans  &none             &kp PLUS         &kp DOUBLE_QUOTES  &kp DE_ASTERISK  &kp PRCNT    &trans
-&trans  &sys_reset       &bt BT_CLR  &kp DE_LEFT_PARENTHESIS  &kp DE_RIGHT_PARENTHESIS  &kp DE_BACKSLASH  &trans  &trans  &none             &kp LEFT         &kp DOWN           &kp UP           &kp RIGHT    &trans
-&trans  &bootloader      &bt BT_NXT  &kp DE_LEFT_BRACKET      &kp DE_RIGHT_BRACKET      &none                             &kp C_PLAY_PAUSE  &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &kp C_NEXT       &bootloader  &trans
+&trans  &rgb_ug RGB_TOG  &bt BT_PRV  &kp DE_LEFT_BRACE        &kp DE_RIGHT_BRACE        &kp DE_CARET      &trans  &trans  &none             &kp DE_PLUS      &kp DE_DOUBLE_QUOTES  &kp DE_ASTERISK  &kp PRCNT    &trans
+&trans  &sys_reset       &bt BT_CLR  &kp DE_LEFT_PARENTHESIS  &kp DE_RIGHT_PARENTHESIS  &kp DE_BACKSLASH  &trans  &trans  &none             &kp LEFT         &kp DOWN              &kp UP           &kp RIGHT    &trans
+&trans  &bootloader      &bt BT_NXT  &kp DE_LEFT_BRACKET      &kp DE_RIGHT_BRACKET      &none                             &kp C_PLAY_PAUSE  &kp C_VOLUME_UP  &kp C_VOLUME_DOWN     &kp C_NEXT       &bootloader  &trans
                                      &trans                   &trans                    &trans                            &trans            &trans           &trans
             >;
 
