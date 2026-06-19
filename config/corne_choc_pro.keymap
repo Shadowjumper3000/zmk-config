@@ -42,10 +42,10 @@
 
         SYMBOL {
             bindings = <
-&trans  &rgb_ug RGB_TOG  &bt BT_PRV  &kp DE_LEFT_BRACE        &kp DE_RIGHT_BRACE        &kp DE_CARET      &trans  &trans  &none             &kp DE_PLUS      &kp DE_DOUBLE_QUOTES  &kp DE_ASTERISK  &kp PRCNT    &trans
-&trans  &sys_reset       &bt BT_CLR  &kp DE_LEFT_PARENTHESIS  &kp DE_RIGHT_PARENTHESIS  &kp DE_BACKSLASH  &trans  &trans  &none             &kp LEFT         &kp DOWN              &kp UP           &kp RIGHT    &trans
-&trans  &bootloader      &bt BT_NXT  &kp DE_LEFT_BRACKET      &kp DE_RIGHT_BRACKET      &none                             &kp C_PLAY_PAUSE  &kp C_VOLUME_UP  &kp C_VOLUME_DOWN     &kp C_NEXT       &bootloader  &trans
-                                     &trans                   &trans                    &trans                            &trans            &trans           &trans
+&trans  &rgb_ug RGB_TOG  &bt BT_PRV  &kp DE_LEFT_BRACE        &kp DE_RIGHT_BRACE        &kp DE_CARET      &trans  &trans  &kp DOUBLE_QUOTES  &kp DE_PLUS      &kp DE_DOUBLE_QUOTES  &kp DE_ASTERISK  &kp PRCNT    &trans
+&trans  &sys_reset       &bt BT_CLR  &kp DE_LEFT_PARENTHESIS  &kp DE_RIGHT_PARENTHESIS  &kp DE_BACKSLASH  &trans  &trans  &kp APOS           &kp LEFT         &kp DOWN              &kp UP           &kp RIGHT    &trans
+&trans  &bootloader      &bt BT_NXT  &kp DE_LEFT_BRACKET      &kp DE_RIGHT_BRACKET      &none                             &kp C_PLAY_PAUSE   &kp C_VOLUME_UP  &kp C_VOLUME_DOWN     &kp C_NEXT       &bootloader  &trans
+                                     &trans                   &trans                    &trans                            &trans             &trans           &trans
             >;
 
             label = "SYMBOL";
